@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function doSearch(text) {
+var catclass = document.getElementById("category").options;    
+var sel;
+var classname;
+var catselect;
+if (window.find && window.getSelection) {
+    sel = window.getSelection();
+    window.find(text);
+    var classname = sel.anchorNode.parentElement.className;
+    var catselect = catclass[document.getElementById("category").selectedIndex].text;
+    while (classname !== catselect) {
+        if (sel.rangeCount > 0) {
+            if (sel.anchorNode.parentElement.className == catclass[document.getElementById("category").selectedIndex].text) {
+                break;
+            }
+            else {
+                doSearch(text);
+            }
+        }
+    }
+}
+	</script>
+</head>
+<body>
+<form id="f1" name="f1" action="javascript:void(0)" onsubmit="searchpage()" >
+    <input id="t1" type="text" name="t1" />
+    <select name="category" id="category">
+        <option>all</option>
+        <option value="name">Title</option>
+        <option value="author">Author</option>
+        <option value="year">Year</option>
+        <option value="publisher">Publisher</option>
+    </select>
+    <input id="button" type="submit" value="SEARCH" name="b1" onclick="searchpage()" />
+</form>
+
+<tr>
+
+<td>
+<div id="name">
+<div id="title">
+title 1
+</div>
+extra content
+</div>
+</td>
+
+<td>
+<div id="author">
+author 1
+</div>
+</td>
+
+<td>
+<div id="year">
+2000
+</div>
+</td>
+
+<td>
+<div id="publisher">
+publisher 1
+</div>
+</td>
+
+<td>
+<div id="notes">
+notes 1
+</div>
+</td>
+
+</tr>
+<!--etc...-->
+
+</body>
+</html>

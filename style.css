@@ -1,0 +1,55 @@
+h2{
+	text-align: center;
+}
+li{
+	font-size: 18px;
+}
+.img-responsive
+{
+	max-width: 100%; 
+	height: auto; 
+	display: block;
+}
+#div1
+{
+	background-color: black;
+}
+
+#div2{
+	margin-bottom: 18px;
+}
+p{
+	font-size: 17px;
+	font-family: sans-serif;
+}
+#div3{
+	
+}
+#div4
+{
+	background-color: #181818;
+	overflow: auto;
+
+}
+#div5
+{
+	background-color: #CC3366;
+	padding-bottom: 18px;
+	overflow: hidden;
+}
+
+#div7
+{
+	background-color: #181818;
+
+}
+
+h4{
+	padding: 27px;
+}
+
+td{
+	font-size: 16px;
+}
+
+/*Social Profile*/

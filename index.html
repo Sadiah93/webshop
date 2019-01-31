@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <title>Electronic Shop</title>
+
+  <script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#div2 div").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#shoes li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script> 
+</head>
+<body>
+ <header><h2>Electronics<h2></header>
+  <!--Menu-->
+<nav class="navbar navbar-inverse" style="margin-bottom: 0;">
+  <div class="container-fluid" id="div1">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar" >
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="#">Items</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="login.php">Login/Sign Up</a></li>
+       </ul>
+        <ul class="navbar navbar-nav navbar-right">
+        <input id="myInput" type="text" placeholder="Search..">
+
+      </ul>
+    </div>
+  </div>
+</nav>
+ <!--categories-->
+<div class="container-fluid" id="div2">
+  <div class="row">
+
+    <div class="col-md-4 text-center">
+     <h3>Mobile</h3>
+     <a href="mobile.html"><img style="height: 250px; width: 450px:" src="mobile.jpg" alt="mobile category"></a>
+    </div>
+
+    <div class="col-md-4 text-center">
+     <h3>Camera</h3>
+    <img style="height: 250px; width: 450px:" src="camera.jpg" alt="camera category">
+    </div>
+
+    <div class="col-md-4 text-center">
+     <h3>Laptop</h3>
+    <img style="height: 250px; width: 450px:" src="laptop.jpg" alt="laptop category">
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#clothes li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#shoes li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<h2>Filterable List</h2>
+<p>Type something in the input field to search the list for specific items:</p>  
+<input id="myInput" type="text" placeholder="Search..">
+<br>
+
+<ul>
+  <li id="clothes"> Silk </li>
+  <li id="clothes">Second item</li>
+  <li id="clothes">Third </li>
+  <li id="clothes">Fourth</li>
+</ul>
+<ul>
+  <li id="shoes"> milk </li>
+  <li id="shoes">Second item</li>
+  <li id="shoes">Third</li>
+  <li id="shoes">Fourth</li>
+</ul>
+  
+</body>
+</html>
